@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
 
         myAnim.SetFloat("Speed", Mathf.Abs(moveValue));
 
-        myRb.velocity = new Vector3(moveValue * runSpeed, myRb.velocity.y, 0);
+        myRb.linearVelocity = new Vector3(moveValue * runSpeed, myRb.linearVelocity.y, 0);
 
         if(moveValue > 0 && !facingRight)
             Flip();
